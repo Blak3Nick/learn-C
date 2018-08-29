@@ -7,23 +7,17 @@ int count =0;
 void *readFile1(char *fileName)
 {
     printf("Reading\n");
-    FILE *file = fopen(fileName, "r");
-    //char *code;
+    FILE *file = fopen(fileName, "r");    
     size_t n = 0;
     int c;
 
     if (file == NULL)
-        return NULL; //could not open file
-
-
-
+        return NULL;
     while ((c = fgetc(file)) != EOF)
     {
         a[n++] = (char) c;
-        //code[n++] = (char) c;
     }
 
-    // don't forget to terminate with the null character
     a[n] = '\0';
     fclose(file);
     exit(0);
@@ -31,7 +25,7 @@ void *readFile1(char *fileName)
 void *readFile2(char *fileName)
 {
     FILE *file = fopen(fileName, "r");
-    //char *code;
+
     size_t n = 0;
     int c;
 
@@ -43,10 +37,8 @@ void *readFile2(char *fileName)
     while ((c = fgetc(file)) != EOF)
     {
         b[n++] = (char) c;
-        //code[n++] = (char) c;
     }
 
-    // don't forget to terminate with the null character
     b[n] = '\0';
     fclose(file);
     exit(0);
