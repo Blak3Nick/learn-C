@@ -8,6 +8,7 @@ int main(){
 	char* AISLE = "AS";
 	char* types[6]= {WINDOW, MIDDLE, AISLE, AISLE, MIDDLE, WINDOW};
 	scanf("%d", &T);
+  printf("%d\n", T);
 
 	unsigned char typeCount = 0;
 	unsigned char seatFace[2][109];
